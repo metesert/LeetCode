@@ -37,5 +37,5 @@ Output:
 +---------+
 | a@b.com |
 +---------+
-```
+
 Explanation: a@b.com is repeated two times.
