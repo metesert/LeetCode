@@ -1,0 +1,8 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        unique_nums = []  # Boş bir liste oluşturulur. Bu liste, benzersiz elemanları içerecektir.
+        for num in nums:  # nums listesindeki elemanlar üzerinde döngü başlatılır.
+            if num not in unique_nums:  # Eğer eleman daha önce unique_nums listesine eklenmemişse:
+                unique_nums.append(num)  # Eleman unique_nums listesine eklenir.
+        nums[:] = unique_nums  # unique_nums listesinin elemanları ile nums listesini günceller.
+        return len(nums)  # Yeni listenin uzunluğu olan len(nums) değeri döndürülür.
