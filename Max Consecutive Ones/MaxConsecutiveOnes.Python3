@@ -1,0 +1,23 @@
+class Solution:
+    def findMaxConsecutiveOnes(self, nums):
+        max_count = 0  # Maksimum ardışık bir sayısı
+        current_count = 0  # Şu anki ardışık bir sayısı
+
+        for num in nums:
+            if num == 1:
+                # Eğer eleman 1 ise, ardışık bir sayısını arttır
+                current_count += 1
+            else:
+                # Eğer eleman 0 ise, şu anki ardışık bir sayısını sıfırla
+                current_count = 0
+
+            # Maksimum ardışık bir sayısını güncelle
+            max_count = max(max_count, current_count)
+
+        return max_count
+
+# Test
+nums = [1, 1, 0, 1, 1, 1]
+solution = Solution()
+result = solution.findMaxConsecutiveOnes(nums)
+print(result)  # Çıktı: 3
